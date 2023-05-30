@@ -3,17 +3,20 @@ import getArticles from "../../utils";
 
 const AllArticles = () => {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     getArticles().then((res) => {
       setArticles(res.data.articles);
+      setIsLoading(false);
     });
   }, []);
+  if (isLoading) return <p>Loading</p>;
   return (
     <>
       {articles.map((element) => {
         const newArr = element.body.split(" ", 10);
         const joinedArr = newArr.join(" ");
-        console.log(element.article_img_url);
         return (
           <section>
             <ul>

@@ -3,9 +3,9 @@ import AllArticles from "./AllArticles";
 const Home = () => {
   return (
     <>
-      <div class="body">
+      <div className="body">
         <h1>Guy's News </h1>
-        <AllArticles />
+        <AllArticles id="allArticles" />
       </div>
     </>
   );
