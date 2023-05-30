@@ -11,7 +11,12 @@ const AllArticles = () => {
       setIsLoading(false);
     });
   }, []);
-  if (isLoading) return <p>Loading</p>;
+  if (isLoading)
+    return (
+      <div className="loader-container">
+        <p>Loading</p>
+      </div>
+    );
   return (
     <>
       {articles.map((element) => {
