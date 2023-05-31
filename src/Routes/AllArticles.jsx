@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import getArticles from "../../utils";
+import { Link, Route, Routes } from "react-router-dom";
+import { getArticles } from "../../utils";
 
 const AllArticles = () => {
   const [articles, setArticles] = useState([]);
@@ -24,24 +25,30 @@ const AllArticles = () => {
         const joinedArr = newArr.join(" ");
         return (
           <section>
-            <ul>
-              <li>
-                <ul element id="Tittle">
-                  {element.title}
-                </ul>
-                <img id="Photo" src={element.article_img_url} />
+            <div className="body">
+              <ul>
+                <li className="body">
+                  <Link
+                    to={`/article/${element.article_id}`}
+                    element
+                    id="Tittle"
+                  >
+                    {element.title}
+                  </Link>
+                  <img id="Photo" src={element.article_img_url} />
 
-                <br></br>
-                <ul element id="snippet">
-                  {joinedArr}...
-                </ul>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-              </li>
-            </ul>
+                  <br></br>
+                  <ul element id="snippet">
+                    {joinedArr}...
+                  </ul>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                </li>
+              </ul>
+            </div>
           </section>
         );
       })}

@@ -8,9 +8,12 @@
 }
 .body {
   background-color: rgb(101, 110, 110);
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  background-size: cover;
 }
 #Tittle {
   list-style-type: none;
