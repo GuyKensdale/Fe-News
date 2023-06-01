@@ -33,7 +33,7 @@ const ArticleComments = () => {
     <>
       {comments.map((element) => {
         return (
-          <section>
+          <section key={element.created_at}>
             <div className="comments">
               <h3 className="body">{element.author}</h3>
               <br></br>
