@@ -5,12 +5,30 @@ import { useParams } from "react-router-dom";
 
 const ArticleComments = () => {
   const [comments, setComments] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const id = useParams();
   useEffect(() => {
     getArticleComments(id.article_id).then((res) => {
       setComments(res.data.comments);
+      setIsLoading(false);
     });
   }, []);
+  if (isLoading)
+    return (
+      <div className="loader-container">
+        <p>Comments Loading...</p>
+      </div>
+    );
+  if (comments.length === 0) {
+    return (
+      <section>
+        <div className="comments">
+          <h3>Looks quite over hear!</h3>
+          <h4>Be the first to leave a comment!</h4>
+        </div>
+      </section>
+    );
+  }
   return (
     <>
       {comments.map((element) => {
