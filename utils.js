@@ -8,4 +8,10 @@ function getArticleById(id) {
   return axios.get(`https://guys-nc-news.onrender.com/api/articles/${id}`);
 }
 
-export { getArticles, getArticleById };
+function getArticleComments(id) {
+  return axios.get(
+    `https://guys-nc-news.onrender.com/api/articles/${id}/comments`
+  );
+}
+
+export { getArticles, getArticleById, getArticleComments };

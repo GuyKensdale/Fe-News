@@ -15,6 +15,14 @@
   flex-wrap: wrap;
   background-size: cover;
 }
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex-wrap: wrap;
+  background-size: cover;
+  justify-content: flex-start;
+}
 #Tittle {
   list-style-type: none;
   font-size: 3.5vw;

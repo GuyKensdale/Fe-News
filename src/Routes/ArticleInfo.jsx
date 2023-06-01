@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { Link, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getArticleById } from "../../utils";
-
+import ArticleComments from "./ArticleComments";
 const ArticleInfo = () => {
   const [singleArticle, setSingleArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +32,7 @@ const ArticleInfo = () => {
             <br></br>
             <br></br>
             <p>{singleArticle.comments}</p>
+            <ArticleComments id="articleComments" />
           </div>
         </section>
       }
