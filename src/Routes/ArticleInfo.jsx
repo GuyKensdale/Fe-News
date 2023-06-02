@@ -26,18 +26,20 @@ const ArticleInfo = () => {
     <>
       {
         <section>
-          <div className="container">
-            <div class="image-container">
-              <img src={singleArticle.article_img_url} />
-            </div>
-            <div class="text-container">
-              <h1>{singleArticle.title}</h1>
-              <br></br>
-              <h2>{singleArticle.body}</h2>
-              <br></br>
-              <br></br>
-              <p>{singleArticle.comments}</p>
-              <ArticleComments id="articleComments" />
+          <div className="body">
+            <div className="container">
+              <div class="image-container">
+                <img src={singleArticle.article_img_url} />
+              </div>
+              <div class="text-container">
+                <h1>{singleArticle.title}</h1>
+                <br></br>
+                <h2>{singleArticle.body}</h2>
+                <br></br>
+                <br></br>
+                <p>{singleArticle.comments}</p>
+                <ArticleComments id="articleComments" />
+              </div>
             </div>
           </div>
           <Link to="/">Home</Link>
