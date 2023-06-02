@@ -7,7 +7,6 @@ import ArticleComments from "./ArticleComments";
 const ArticleInfo = () => {
   const [singleArticle, setSingleArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [votes, setVotes] = useState();
 
   const { article_id } = useParams();
 
@@ -29,12 +28,12 @@ const ArticleInfo = () => {
         <section>
           <div className="body">
             <Link to="/">Home</Link>
+            <Votes singleArticle={singleArticle.votes} />
             <h1>{singleArticle.title}</h1>
             <br></br>
             <p>{singleArticle.body}</p>
             <br></br>
             <br></br>
-            <Votes singleArticle={singleArticle.votes} />
             <p>{singleArticle.comments}</p>
             <ArticleComments id="articleComments" />
           </div>
