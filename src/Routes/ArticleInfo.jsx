@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { Link, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getArticleById, voteForArticle } from "../../utils";
-import Votes from "../Routes/Votes.jsx";
+import Votes from "./Votes.jsx";
 import ArticleComments from "./ArticleComments";
 const ArticleInfo = () => {
   const [singleArticle, setSingleArticle] = useState([]);
@@ -27,6 +27,7 @@ const ArticleInfo = () => {
       {
         <section>
           <div className="body">
+            <p>you are logged in as cooljmessy</p>
             <Link to="/">Home</Link>
             <Votes singleArticle={singleArticle.votes} />
             <h1>{singleArticle.title}</h1>
@@ -42,5 +43,4 @@ const ArticleInfo = () => {
     </>
   );
 };
-
 export default ArticleInfo;

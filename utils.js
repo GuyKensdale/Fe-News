@@ -22,5 +22,21 @@ function voteForArticle(id) {
       return res.data.article.votes;
     });
 }
+function postComment(id, newComment) {
+  return axios
+    .post(`https://guys-nc-news.onrender.com/api/articles/${id}/comments`, {
+      username: "cooljmessy",
+      body: newComment,
+    })
+    .then((res) => {
+      return res.data.comment;
+    });
+}
 
-export { getArticles, getArticleById, getArticleComments, voteForArticle };
+export {
+  getArticles,
+  getArticleById,
+  getArticleComments,
+  voteForArticle,
+  postComment,
+};

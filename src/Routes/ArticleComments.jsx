@@ -2,10 +2,12 @@ import { getArticleComments } from "../../utils";
 import { Link, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import AddCom from "./Addcom.jsx";
 
 const ArticleComments = () => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   const id = useParams();
   useEffect(() => {
     getArticleComments(id.article_id).then((res) => {
@@ -31,6 +33,7 @@ const ArticleComments = () => {
   }
   return (
     <>
+      <AddCom />
       {comments.map((element) => {
         return (
           <section key={element.created_at}>
