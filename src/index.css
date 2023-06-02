@@ -2,12 +2,14 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  background-color: #232c33;
+  background-size: cover;
 }
 #Photo {
   list-style-type: none;
 }
 .body {
-  background-color: rgb(101, 110, 110);
+  background-color: #232c33;
 
   display: flex;
   flex-direction: column;
@@ -34,11 +36,11 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #232c33;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #232c33;
   }
   button {
     background-color: #f9f9f9;
@@ -56,18 +58,55 @@
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.2em 0.7em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #ce1010;
+  background-color: #232c33;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #ee4917;
+  border-color: #232c33;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.image-container {
+  flex: 1;
+  background-color: #627782;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  flex: 1;
+  background-color: #232c33;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.text-container h1,
+.text-container p {
+  margin-top: 0;
+}
+a {
+  color: #627782;
+}
+
+a:hover {
+  color: #627782;
 }

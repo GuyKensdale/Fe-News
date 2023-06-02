@@ -26,10 +26,12 @@ const Votes = (singleArticle) => {
   }
   return (
     <>
-      <div>This article has {votes} votes!</div>
-      <button id="button" onClick={handleArticleVote}>
-        👍
-      </button>
+      <div class="text-container">
+        <div>This article has {votes} votes!</div>
+        <button id="button" onClick={handleArticleVote}>
+          👍
+        </button>
+      </div>
     </>
   );
 };

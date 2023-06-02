@@ -26,29 +26,31 @@ const AllArticles = () => {
         return (
           <section>
             <div className="body">
-              <ul>
-                <li className="body">
-                  <Link
-                    to={`/article/${element.article_id}`}
-                    element
-                    id="Tittle"
-                  >
-                    {element.title}
-                  </Link>
-                  <img id="Photo" src={element.article_img_url} />
+              <div class="text-container">
+                <ul>
+                  <li className="body">
+                    <Link
+                      to={`/article/${element.article_id}`}
+                      element
+                      id="Tittle"
+                    >
+                      {element.title}
+                    </Link>
+                    <img id="Photo" src={element.article_img_url} />
 
-                  <br></br>
-                  <ul element id="snippet">
-                    {joinedArr}...
-                  </ul>
+                    <br></br>
+                    <ul element id="snippet">
+                      {joinedArr}...
+                    </ul>
 
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                </li>
-              </ul>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
         );
